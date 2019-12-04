@@ -3,7 +3,7 @@
 Transactions are atomic and isolated units of work in relational databases. If you are not familiar with transactions, I suggest you read up on them. [The wikipedia article](https://en.wikipedia.org/wiki/Database_transaction) is a good place to start.
 
 ## Creating a transaction
-
+/
 In objection, a transaction can be started by calling the [Model.transaction](/api/model/static-methods.html#static-transaction) function:
 
 ```js
@@ -46,10 +46,10 @@ An alternative way to start a transaction is to use the [Model.startTransaction(
 ```js
 const { transaction } = require('objection');
 
-const trx = await Person.startTransction();
+const trx = await Person.startTransaction();
 
 try {
-  // If you created the transaction using `Model.startTransction`, you need
+  // If you created the transaction using `Model.startTransaction`, you need
   // commit or rollback the transaction manually.
   await trx.commit();
 } catch (err) {

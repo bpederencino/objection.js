@@ -46,10 +46,10 @@ An alternative way to start a transaction is to use the [Model.startTransaction(
 ```js
 const { transaction } = require('objection');
 
-const trx = await Person.startTransction();
+const trx = await Person.startTransaction();
 
 try {
-  // If you created the transaction using `Model.startTransction`, you need
+  // If you created the transaction using `Model.startTransaction`, you need
   // commit or rollback the transaction manually.
   await trx.commit();
 } catch (err) {
